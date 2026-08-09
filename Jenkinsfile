@@ -15,7 +15,7 @@ pipeline {
     environment {
         CATALINA_HOME = '/home/osboxes/tomcat/apache-tomcat-11.0.24'
 
-        TOMCAT_HOST = '192.168.10.20'
+        TOMCAT_HOST = '192.168.1.12'
         DEPLOY_USER = 'osboxes'
 
         APP_NAME = 'myapp'
