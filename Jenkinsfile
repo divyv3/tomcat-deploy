@@ -44,6 +44,24 @@ pipeline {
                     echo "======================================"
                     mvn -version
                     mvn clean package -DskipTests
+                      echo "Generated artifacts:"
+            ls -lh target/
+
+            echo "Preparing deployment WAR..."
+
+            WAR=$(find target -maxdepth 1 -type f -name "*.war" | head -1)
+
+            if [ -z "$WAR" ]; then
+                echo "ERROR: No WAR file found!"
+                exit 1
+            fi
+
+            echo "Found WAR: $WAR"
+
+            cp "$WAR" "target/${APP_NAME}.war"
+
+            echo "Deployment WAR:"
+            ls -lh "target/${APP_NAME}.war"
                 '''
             }
         }
