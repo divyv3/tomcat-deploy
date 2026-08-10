@@ -70,10 +70,10 @@ pipeline {
                             '/home/osboxes/tomcat/tomcat-instance1'
 
                         env.STOP_SCRIPT =
-                            "${env.CATALINA_HOME}/stop-instance1.sh"
+                            "${env.CATALINA_HOME}/bin/stop-instance1.sh"
 
                         env.START_SCRIPT =
-                            "${env.CATALINA_HOME}/start-instance1.sh"
+                            "${env.CATALINA_HOME}/bin/start-instance1.sh"
 
                         env.TOMCAT_PORT = '8080'
 
@@ -83,10 +83,10 @@ pipeline {
                             '/home/osboxes/tomcat/tomcat-instance2'
 
                         env.STOP_SCRIPT =
-                            "${env.CATALINA_HOME}/stop-instance2.sh"
+                            "${env.CATALINA_HOME}/bin/stop-instance2.sh"
 
                         env.START_SCRIPT =
-                            "${env.CATALINA_HOME}/start-instance2.sh"
+                            "${env.CATALINA_HOME}/bin/start-instance2.sh"
 
                         env.TOMCAT_PORT = '8081'
 
