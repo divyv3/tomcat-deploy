@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+    maven 'Maven-3.9.16'
+}
+
     parameters {
         choice(
             name: 'TOMCAT_INSTANCE',
@@ -38,7 +42,7 @@ pipeline {
                     echo "======================================"
                     echo "Building application"
                     echo "======================================"
-
+                    mvn -version
                     mvn clean package -DskipTests
                 '''
             }
